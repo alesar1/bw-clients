@@ -59,7 +59,6 @@ export class Fido2ClientService implements Fido2ClientServiceAbstraction {
       this.logService?.warning(
         `[Fido2Client] Invalid 'sameOriginWithAncestors' value: ${params.sameOriginWithAncestors}`
       );
-      throw new DOMException("Invalid 'sameOriginWithAncestors' value", "NotAllowedError");
     }
 
     const userId = Fido2Utils.stringToBuffer(params.user.id);
